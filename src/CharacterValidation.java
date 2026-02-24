@@ -1,5 +1,3 @@
-package src;
-
 public class CharacterValidation
 {
     boolean upperCase=false;  
@@ -43,4 +41,12 @@ public class CharacterValidation
         }
         return false;
     }
+
+    // public static void main(String[] args)
+    // {
+    //     CharacterValidation charValObj = new CharacterValidation();
+    //     System.out.println(charValObj.hasUpperLower("hi"));
+    //     System.out.println(charValObj.hasUpperLower("Hello"));
+    //     System.out.println(charValObj.hasUpperLower("bYe"));
+    // }    
 }
