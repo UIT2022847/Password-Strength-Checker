@@ -1,5 +1,6 @@
 public class SpecialCharacterValidation{
-        public static boolean hasSpecialCharacter(String password)
+    
+    public boolean hasSpecialCharacter(String password)
     {
         boolean hasSpecialCharacter=false;
 
