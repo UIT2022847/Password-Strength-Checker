@@ -1,18 +1,46 @@
+package src;
 
 public class CharacterValidation
 {
-    public static boolean hasSpecialCharacter(String password)
-    {
-        boolean hasSpecialCharacter=false;
+    boolean upperCase=false;  
+    boolean lowerCase=false;
 
-        for(char ch: password.toCharArray())
+    public boolean hasUpper(String input){
+        int i;
+        for(i=0; i<input.length(); i++)
         {
-            if(!Character.isLetterOrDigit(ch))
+            if(Character.isUpperCase(input.charAt(i)))
             {
-                hasSpecialCharacter=true;
-                break;
+                upperCase=true;
             }
         }
-        return hasSpecialCharacter;
+
+        return upperCase;
+    }
+    
+    public boolean hasLower(String input){
+
+        int i;
+        for(i=0; i<input.length(); i++)
+        {
+            if(Character.isLowerCase(input.charAt(i)))
+            {
+                lowerCase=true;
+            }
+
+        }
+        
+        return lowerCase;
+    }
+
+    public boolean hasUpperLower(String input)
+    {
+        boolean uC = hasUpper(input);
+        boolean lC = hasLower(input);
+        if(uC==true && lC==true)
+        {
+            return true;
+        }
+        return false;
     }
 }
