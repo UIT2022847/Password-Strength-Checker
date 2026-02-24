@@ -1,3 +1,4 @@
+package src;
 
 public class CharacterValidation
 {
@@ -28,7 +29,7 @@ public class CharacterValidation
             }
 
         }
-
+        
         return lowerCase;
     }
 
