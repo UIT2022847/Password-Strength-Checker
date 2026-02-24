@@ -1,3 +1,4 @@
+
 public class CharacterValidation
 {
     boolean upperCase=false;  
