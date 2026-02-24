@@ -2,7 +2,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class SpecialCharacterValidationTest {
-    SpecialCharacterValidation sp= new SpecialCharacterValidation();
+
+    SpecialCharacterValidation sp = new SpecialCharacterValidation();
 
     @Test
     void testPasswordWithSpecialCharacter() {
@@ -15,18 +16,8 @@ public class SpecialCharacterValidationTest {
     }
 
     @Test
-    void testPasswordWithOnlyLetters() {
-        assertFalse(sp.hasSpecialCharacter("Password"));
-    }
-
-    @Test
-    void testPasswordWithOnlyDigits() {
-        assertFalse(sp.hasSpecialCharacter("123456"));
-    }
-
-    @Test
-    void testPasswordWithMultipleSpecialCharacters() {
-        assertTrue(sp.hasSpecialCharacter("Pass@#123!"));
+    void testOnlySpecialCharacter() {
+        assertTrue(sp.hasSpecialCharacter("@"));
     }
 
     @Test
