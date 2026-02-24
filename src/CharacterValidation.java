@@ -1,48 +1,23 @@
 
 public class CharacterValidation
 {
-    boolean upperCase=false;  
-    boolean lowerCase=false;
+    public boolean hasUpperLower(String input) {
+    boolean hasUpper = false;
+    boolean hasLower = false;
 
-    public boolean hasUpper(String input){
-        int i;
-        for(i=0; i<input.length(); i++)
-        {
-            if(Character.isUpperCase(input.charAt(i)))
-            {
-                upperCase=true;
-            }
+    for (int i = 0; i < input.length(); i++) {
+        char ch = input.charAt(i);
+
+        if (Character.isUpperCase(ch)) {
+            hasUpper = true;
         }
-
-        return upperCase;
-    }
-    
-    public boolean hasLower(String input){
-
-        int i;
-        for(i=0; i<input.length(); i++)
-        {
-            if(Character.isLowerCase(input.charAt(i)))
-            {
-                lowerCase=true;
-            }
-
+        if (Character.isLowerCase(ch)) {
+            hasLower = true;
         }
-        
-        return lowerCase;
     }
 
-    public boolean hasUpperLower(String input)
-    {
-        boolean uC = hasUpper(input);
-        boolean lC = hasLower(input);
-        if(uC==true && lC==true)
-        {
-            return true;
-        }
-        return false;
-    }
-
+    return hasUpper && hasLower;
+}
     // public static void main(String[] args)
     // {
     //     CharacterValidation charValObj = new CharacterValidation();
