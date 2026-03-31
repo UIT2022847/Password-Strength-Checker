@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building Maven project'
+                sh 'mvn -f demo/pom.xml -Dmaven.test.skip=true clean package'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running Maven tests'
+                sh 'mvn -f demo/pom.xml test'
+            }
+        }
+
+        stage('Publish') {
+            steps {
+                echo 'Publishing test results and artifacts'
+                junit 'demo/target/surefire-reports/*.xml'
+                archiveArtifacts artifacts: 'demo/target/*.jar', fingerprint: true
+            }
+        }
+    }
+
+    post {
+        always {
+            junit 'demo/target/surefire-reports/*.xml'
+        }
+    }
+}
