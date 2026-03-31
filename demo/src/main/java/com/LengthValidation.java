@@ -1,3 +1,4 @@
+package com;
 class LengthValidation {
     //generate random length between 8 to 12
     private static final int MIN_LENGTH = 8;

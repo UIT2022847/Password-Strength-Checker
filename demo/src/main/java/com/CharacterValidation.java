@@ -1,4 +1,4 @@
-
+package com;
 public class CharacterValidation
 {
     public boolean hasUpperLower(String input) {

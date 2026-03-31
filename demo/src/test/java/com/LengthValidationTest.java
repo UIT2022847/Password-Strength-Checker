@@ -1,5 +1,8 @@
+package com;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 class LengthValidationTest {
     private final LengthValidation validator = new LengthValidation();

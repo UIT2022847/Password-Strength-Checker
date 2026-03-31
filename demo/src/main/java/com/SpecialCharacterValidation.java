@@ -1,3 +1,4 @@
+package com;
 public class SpecialCharacterValidation{
     
     public boolean hasSpecialCharacter(String password)
