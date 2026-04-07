@@ -14,7 +14,7 @@ class LengthValidationTest {
 
     @Test
     void shouldReturnTrueWhenPasswordLengthIsGreaterThanMinLength() {
-        assertFalse(validator.isValidLength("123456789"));
+        assertTrue(validator.isValidLength("123456789"));
     }
 
     @Test
